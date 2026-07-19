@@ -1,4 +1,13 @@
-node_modules/
-.next/
-.env.local
-.DS_Store
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.supabase.co',
+      },
+    ],
+  },
+};
+
+module.exports = nextConfig;
